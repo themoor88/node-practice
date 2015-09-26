@@ -1,0 +1,12 @@
+NodeJS enables event driven, I/O bound, real-time, and high concurrency apps.
+
+Multiple data set access and multpile HTTP requests to third part APIs.
+
+Sending JSON payload are easy, document databases.
+
+Nodemon crashes and reloads the browser on changes to your files.
+
+Make your own module and then require it, with the path in the file you want to use your module.
+
+In the module code, use exports and assign properties or methods to the object which can be used in the module.
+
