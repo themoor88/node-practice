@@ -17,3 +17,10 @@ One object that the module uses, use module.exports. Think of the exports object
 Express is a bunch of middleware, inspired form Sinatra. Express is configuration over convention.
 
 urlEncoded is a form of middleware to process the HTTP requests before it reaches the business logic.
+
+Express takes care of templating, routing and middleware(process data as it comes in).
+
+Object Document Mapper is Mongoose.
+
+Mongoose gives a structure or schema to MongoDB. A collections of documents. A collection is a table. Docuemnts are table rows. Mongoose can enforce data validations and other functions like .find or other queries.
+

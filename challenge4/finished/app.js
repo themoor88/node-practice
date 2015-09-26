@@ -1,5 +1,5 @@
-var express = require('express'), 
-    http = require('http'), 
+var express = require('express'),
+    http = require('http'),
     path = require('path'),
     Post = require('./Post');
 
@@ -21,6 +21,14 @@ app.configure('development', function() {
     app.use(express.errorHandler());
 });
 
+
+var auth = express.basicAuth(function(username, password) {
+    return username === 'foo' && password === 'bar';
+});
+
+app.use(auth);
+// All routes require authorization.
+
 // Render our home page with all blog posts
 app.get('/', function(request, response) {
     Post.find(function(err, posts) {
@@ -36,12 +44,12 @@ app.get('/', function(request, response) {
 });
 
 // Render a form to enter a new post
-app.get('/new', function(request, response) {
+app.get('/new', auth, function(request, response) {
     response.render('new', {});
 });
 
 // create a new blog post object
-app.post('/create', function(request, response) {
+app.post('/create', auth, function(request, response) {
     //Create and save a Post model
     var post = new Post({
         title: request.body.title,
