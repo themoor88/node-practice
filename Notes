@@ -10,3 +10,10 @@ Make your own module and then require it, with the path in the file you want to 
 
 In the module code, use exports and assign properties or methods to the object which can be used in the module.
 
+Filesystem reads files into memory(buffer) and outputs the response, you can also use streams.
+
+One object that the module uses, use module.exports. Think of the exports object that returns into the require.
+
+Express is a bunch of middleware, inspired form Sinatra. Express is configuration over convention.
+
+urlEncoded is a form of middleware to process the HTTP requests before it reaches the business logic.
